@@ -26,7 +26,7 @@ def create_table():
                   max_distance INTEGER,
                   age INTEGER,
                   location TEXT,
-				  experience TEXT,
+		  experience TEXT,
                   features TEXT)''')
     conn.commit()
     conn.close()
@@ -57,7 +57,7 @@ with st.form('survey_questions'):
     age = st.number_input('Entre sua idade', min_value=18, max_value=50, value=30)
 
     st.write('7. Onde você mora?')
-    location = st.text_input('Escreva cidade/bairro', key='location')
+    location = st.text_input('Escreva bairro/cidade', key='location')
 
     st.write('8. O que você mais gostaria de experimentar em uma liga de basquete?')
     experience = st.text_area('Escreva sua resposta aqui', key='experience')
