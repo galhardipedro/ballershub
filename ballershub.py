@@ -20,14 +20,14 @@ def create_table():
     c.execute('''CREATE TABLE IF NOT EXISTS survey_questions 
                  (id INTEGER PRIMARY KEY AUTOINCREMENT,
                   interest_level INTEGER,
+                  events INTEGER,
                   playing_frequency TEXT,
-                  previous_leagues INTEGER,
+                  previous_leagues TEXT,
                   max_distance INTEGER,
-                  value_in_league TEXT,
-                  challenges TEXT,
-                  features TEXT,
-                  feelings TEXT,
-                  expectations TEXT)''')
+                  age INTEGER,
+                  location TEXT,
+				  experience TEXT,
+                  features TEXT)''')
     conn.commit()
     conn.close()
 
